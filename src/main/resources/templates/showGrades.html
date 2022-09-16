@@ -11,7 +11,6 @@
         <th>Name</th>
         <th>Subject</th>
         <th>Grade</th>
-        <th></th>
     </tr>
     </thead>
     <tobody>
@@ -19,6 +18,7 @@
             <td th:text="${grade.name}"></td>
             <td th:text="${grade.subject}"></td>
             <td th:text="${grade.mark}"></td>
+            <td><a role="button" th:href="@{/gradeform/(id=${grade.id})}">Update</a></td>
         </tr>
     </tobody>
 </table>

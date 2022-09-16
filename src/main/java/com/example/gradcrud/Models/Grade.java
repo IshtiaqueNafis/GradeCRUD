@@ -1,17 +1,23 @@
 package com.example.gradcrud.Models;
 
-public class Grade {
-    public String name;
-    public String subject;
-    public String mark;
+import java.util.UUID;
 
-    public Grade(String name, String subject, String mark) {
-        this.name = name;
-        this.subject = subject;
-        this.mark = mark;
+public class Grade {
+    private String name;
+    private String subject;
+    private String mark;
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public Grade() {
+        this.id = UUID.randomUUID().toString();
     }
 
     public String getName() {
