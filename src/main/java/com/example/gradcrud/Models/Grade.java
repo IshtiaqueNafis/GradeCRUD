@@ -1,10 +1,15 @@
 package com.example.gradcrud.Models;
 
+import javax.validation.constraints.NotBlank;
 import java.util.UUID;
 
 public class Grade {
+    @NotBlank(message = "name can not be blank")
     private String name;
+
+    @NotBlank(message = "subject can not be blank")
     private String subject;
+    @NotBlank(message = "mark can not be blank")
     private String mark;
     private String id;
 
